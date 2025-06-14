@@ -1,5 +1,5 @@
 def process_data():
-    print("Processando dados...")
+    print("Teste de processamento de dados")
 
 if __name__ == "__main__":
     process_data()
