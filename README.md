@@ -62,5 +62,4 @@ books.toscrape.com
 
 Documentação FastAPI
 =======
-# tech-challenge-fiap-books-api
->>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8
+
