@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Como Executar o Projeto Localmente
 1. Clone o repositório
 
