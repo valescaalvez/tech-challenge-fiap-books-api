@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+<<<<<<< HEAD
 from typing import List, Dict
 import csv
 import os
@@ -20,3 +21,15 @@ def load_books() -> List[Dict]:
 def get_books():
     books = load_books()
     return books
+=======
+
+app = FastAPI()
+
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
+
+@app.post("/predict")
+def predict(input_data: dict):
+    return {"result": f"Você enviou: {input_data}"}
+>>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8

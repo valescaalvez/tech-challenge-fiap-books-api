@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Como Executar o Projeto Localmente
 1. Clone o repositório
 
@@ -59,3 +60,6 @@ Lista todos os livros disponíveis na base.
 books.toscrape.com
 
 Documentação FastAPI
+=======
+# tech-challenge-fiap-books-api
+>>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8

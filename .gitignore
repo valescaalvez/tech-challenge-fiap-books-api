@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 .env
 data/*.csv
 venv/
+=======
+__pycache__/
+*.pyc
+.env
+data/*.csv
+venv/
+>>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8
