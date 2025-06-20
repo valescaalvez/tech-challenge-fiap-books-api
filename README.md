@@ -8,7 +8,7 @@ cd tech-challenge-fiap-books-api-main
 
 2. Crie e ative o ambiente virtual
 
-python -m venv venv
+```python -m venv venv```
 # No Windows PowerShell
 ```.\venv\Scripts\Activate.ps1```
 # Ou no CMD:
