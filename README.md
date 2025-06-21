@@ -50,7 +50,7 @@ Lista todos os livros disponíveis na base.
 
 [Felipe Breseghello](https://github.com/fbreseghello)
 
-[Valesca Alvez](https://github.com/valescaalvez)
+[Valesca Alves](https://github.com/valescaalvez)
 
 [Brunno Salvatti](https://github.com/brunnosalvatti)
 
