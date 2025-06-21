@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-<<<<<<< HEAD
 from typing import List, Dict
 import csv
 import os
@@ -13,7 +12,7 @@ def load_books() -> List[Dict]:
     with open(BOOKS_CSV_PATH, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for idx, row in enumerate(reader):
-            row["id"] = idx  # Adiciona um id único para cada livro (baseado na ordem)
+            row["id"] = idx  # Gera id único para cada livro)
             books.append(row)
     return books
 
@@ -21,15 +20,3 @@ def load_books() -> List[Dict]:
 def get_books():
     books = load_books()
     return books
-=======
-
-app = FastAPI()
-
-@app.get("/ping")
-def ping():
-    return {"message": "pong"}
-
-@app.post("/predict")
-def predict(input_data: dict):
-    return {"result": f"Você enviou: {input_data}"}
->>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8
