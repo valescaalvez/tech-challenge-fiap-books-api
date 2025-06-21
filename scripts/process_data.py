@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -55,10 +54,9 @@ if __name__ == "__main__":
     books = scrape_books()
     save_to_csv(books)
     print(f"Scraped {len(books)} books! Salvo em data/books.csv")
-=======
+
 def process_data():
     print("Teste de processamento de dados")
 
 if __name__ == "__main__":
     process_data()
->>>>>>> efa5df89fdabc6d250c8e1ac5408dcf4bfc27fd8
