@@ -54,9 +54,3 @@ if __name__ == "__main__":
     books = scrape_books()
     save_to_csv(books)
     print(f"Scraped {len(books)} books! Salvo em data/books.csv")
-
-def process_data():
-    print("Teste de processamento de dados")
-
-if __name__ == "__main__":
-    process_data()
