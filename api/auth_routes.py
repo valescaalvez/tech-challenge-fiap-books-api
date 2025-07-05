@@ -5,7 +5,7 @@ auth_bp = Blueprint('auth', __name__, url_prefix='/api/v1/auth')
 
 
 USER_DATA = {
-    "admin": "password"
+    "admin": "senha"
 }
 
 @auth_bp.route('/login', methods=['POST'])
