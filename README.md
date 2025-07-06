@@ -22,7 +22,7 @@ API Flask: Lê o CSV e oferece endpoints RESTful para consulta, busca e análise
 
 Deploy: API acessível publicamente para cientistas de dados, integrações e consumidores externos.
 
-Instruções de Instalação e Configuração
+## Instruções de Instalação e Configuração
 Clone o repositório:
 
 git clone https://github.com/seu-usuario/tech-challenge-fiap-books-api.git
@@ -31,21 +31,22 @@ Crie e ative um ambiente virtual:
 
 Windows:
 
-
+```
 python -m venv venv
 venv\Scripts\activate
+```
 Linux/Mac:
-
+```
 python3 -m venv venv
 source venv/bin/activate
 Instale as dependências:
+```
 
-
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 (Opcional) Gere o arquivo data/books.csv:
 
 
-python scripts/scrape_books.py
+`python scripts/scrape_books.py`
 O arquivo CSV já está disponível no repositório, mas pode ser atualizado rodando o script acima.
 
 Documentação das Rotas da API
@@ -56,11 +57,11 @@ http://localhost:5000/apidocs
 Principais endpoints:
 
 Método	Endpoint	Descrição
-GET	/api/v1/health	Verifica se a API está online
-GET	/api/v1/books	Lista todos os livros
-GET	/api/v1/books/<id>	Detalhes de um livro por ID
-GET	/api/v1/books/search?title=&category=	Busca livros por título/categoria
-GET	/api/v1/categories	Lista todas as categorias
+GET	/api/v1/health	Verifica se a API está online  
+GET	/api/v1/books	Lista todos os livros  
+GET	/api/v1/books/<id>	Detalhes de um livro por ID  
+GET	/api/v1/books/search?title=&category=	Busca livros por título/categoria  
+GET	/api/v1/categories	Lista todas as categorias  
 
 Exemplos de Chamadas
 1. Listar todos os livros
