@@ -45,7 +45,7 @@ Instale as dependências:
 
 `pip install -r requirements.txt`
 
-(Opcional) Gere o arquivo data/books.csv:
+(Opcional) Gere o arquivo data/books.csv:  
 `python scripts/scrape_books.py`  
 O arquivo CSV já está disponível no repositório, mas pode ser atualizado rodando o script acima.
 
