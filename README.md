@@ -25,8 +25,10 @@ Deploy: API acessível publicamente para cientistas de dados, integrações e co
 ## Instruções de Instalação e Configuração
 Clone o repositório:
 
-`git clone https://github.com/seu-usuario/tech-challenge-fiap-books-api.git`
-`cd tech-challenge-fiap-books-api`
+```
+git clone https://github.com/seu-usuario/tech-challenge-fiap-books-api.git
+cd tech-challenge-fiap-books-api
+```
 
 Crie e ative um ambiente virtual:  
 Windows:  
@@ -44,7 +46,7 @@ Instale as dependências:
 `pip install -r requirements.txt`
 
 (Opcional) Gere o arquivo data/books.csv:
-`python scripts/scrape_books.py`
+`python scripts/scrape_books.py`  
 O arquivo CSV já está disponível no repositório, mas pode ser atualizado rodando o script acima.
 
 Documentação das Rotas da API
@@ -52,96 +54,86 @@ A documentação interativa completa (Swagger) está disponível em:
 
 http://localhost:5000/apidocs
 
-Principais endpoints:
+### Principais endpoints:  
 
-Método	Endpoint	Descrição
-GET	/api/v1/health	Verifica se a API está online  
-GET	/api/v1/books	Lista todos os livros  
-GET	/api/v1/books/<id>	Detalhes de um livro por ID  
-GET	/api/v1/books/search?title=&category=	Busca livros por título/categoria  
-GET	/api/v1/categories	Lista todas as categorias  
+Método - Endpoint - Descrição
 
-Exemplos de Chamadas
-1. Listar todos os livros
+GET	/api/v1/health - Verifica se a API está online  
+GET	/api/v1/books - Lista todos os livros  
+GET	/api/v1/books/<id> - Detalhes de um livro por ID  
+GET	/api/v1/books/search?title=&category= - Busca livros por título/categoria  
+GET	/api/v1/categories - Lista todas as categorias  
 
+### Exemplos de Chamadas:  
+
+**1. Listar todos os livros**  
 GET /api/v1/books
 Exemplo de resposta:
+ 
+  {  
+    "id": 0,  
+    "titulo": "A Light in the ...",  
+    "preco": 51.77,  
+    "avaliacao": "Three",  
+    "estoque": "In stock (22 available)",  
+    "categoria": "Travel",  
+    "url_imagem": "https://books.toscrape.com/media/...",  
+    "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"  
+  },  
 
 
-[
-  {
-    "id": 0,
-    "titulo": "A Light in the ...",
-    "preco": 51.77,
-    "avaliacao": "Three",
-    "estoque": "In stock (22 available)",
-    "categoria": "Travel",
-    "url_imagem": "https://books.toscrape.com/media/...",
-    "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-  },
-  ...
-]
-2. Detalhar um livro específico
+**2. Detalhar um livro específico**  
+GET /api/v1/books/0  
+Exemplo de resposta:  
 
-GET /api/v1/books/0
+{  
+  "id": 0,  
+  "titulo": "A Light in the ...",  
+  "preco": 51.77,  
+  "avaliacao": "Three",  
+  "estoque": "In stock (22 available)",  
+  "categoria": "Travel",  
+  "url_imagem": "https://books.toscrape.com/media/...",  
+  "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"  
+}  
+
+
+**3. Buscar por título e categoria**  
+GET /api/v1/books/search?title=light&category=travel  
+Exemplo de resposta:  
+
+  {  
+    "id": 0,  
+    "titulo": "A Light in the ...",  
+    "preco": 51.77,  
+    "avaliacao": "Three",  
+    "estoque": "In stock (22 available)",  
+    "categoria": "Travel",  
+    "url_imagem": "https://books.toscrape.com/media/...",  
+    "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"  
+  }  
+
+
+**4. Listar todas as categorias**  
+GET /api/v1/categories  
 Exemplo de resposta:
 
-{
-  "id": 0,
-  "titulo": "A Light in the ...",
-  "preco": 51.77,
-  "avaliacao": "Three",
-  "estoque": "In stock (22 available)",
-  "categoria": "Travel",
-  "url_imagem": "https://books.toscrape.com/media/...",
-  "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-}
-3. Buscar por título e categoria
+["Travel", "Mystery", "Historical Fiction", ...]  
 
-GET /api/v1/books/search?title=light&category=travel
+
+**6. Healthcheck**  
+GET /api/v1/health  
 Exemplo de resposta:
 
-[
-  {
-    "id": 0,
-    "titulo": "A Light in the ...",
-    "preco": 51.77,
-    "avaliacao": "Three",
-    "estoque": "In stock (22 available)",
-    "categoria": "Travel",
-    "url_imagem": "https://books.toscrape.com/media/...",
-    "url_livro": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-  }
-]
-4. Listar todas as categorias
+{ "status": "ok" }  
+Instruções para Execução  
+Ative o ambiente virtual:  
+(Se não estiver ativo)  
 
-GET /api/v1/categories
-Exemplo de resposta:
+Execute a API:  
+`python app.py`  
 
-
-["Travel", "Mystery", "Historical Fiction", ...]
-5. Healthcheck
-
-GET /api/v1/health
-Exemplo de resposta:
-
-
-{ "status": "ok" }
-Instruções para Execução
-Ative o ambiente virtual:
-(Se não estiver ativo)
-
-Execute a API:
-
-
-python app.py
-Acesse a documentação interativa:
-
-http://localhost:5000/apidocs
+Acesse a documentação interativa:  
+`http://localhost:5000/apidocs`  
 
 Utilize ferramentas como Postman, Insomnia, curl ou navegador para testar os endpoints.
-
-Observações Finais
-O deploy público pode ser realizado em plataformas como Render, Heroku ou Fly.io.
-
-Sinta-se à vontade para criar issues ou sugestões neste repositório!
