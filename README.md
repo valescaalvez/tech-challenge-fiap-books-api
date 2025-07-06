@@ -25,12 +25,11 @@ Deploy: API acessível publicamente para cientistas de dados, integrações e co
 ## Instruções de Instalação e Configuração
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/tech-challenge-fiap-books-api.git
-cd tech-challenge-fiap-books-api
-Crie e ative um ambiente virtual:
+`git clone https://github.com/seu-usuario/tech-challenge-fiap-books-api.git`
+`cd tech-challenge-fiap-books-api`
 
-Windows:
-
+Crie e ative um ambiente virtual:  
+Windows:  
 ```
 python -m venv venv
 venv\Scripts\activate
@@ -43,9 +42,8 @@ Instale as dependências:
 ```
 
 `pip install -r requirements.txt`
+
 (Opcional) Gere o arquivo data/books.csv:
-
-
 `python scripts/scrape_books.py`
 O arquivo CSV já está disponível no repositório, mas pode ser atualizado rodando o script acima.
 
