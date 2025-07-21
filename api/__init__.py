@@ -1,4 +1,5 @@
 from flask import Flask
+<<<<<<< HEAD
 from flask_jwt_extended import JWTManager
 import os
 from flasgger import Swagger
@@ -40,4 +41,13 @@ def create_app():
     app.data_loader = new_loader
     sys.modules[__name__ + '.data_loader'].data_loader = new_loader
 
+=======
+from flasgger import Swagger
+
+def create_app():
+    app = Flask(__name__)
+    Swagger(app)
+    from .routes import bp
+    app.register_blueprint(bp)
+>>>>>>> 9f5a4d38f3a218fc1c8fe873ff0c11ac243bf3c9
     return app
