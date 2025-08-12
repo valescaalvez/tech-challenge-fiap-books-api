@@ -17,7 +17,7 @@ Arquivos principais do repositório:
 
 ## Instalação e execução
 ```bash
-git clone <repo>
+git clone https://github.com/valescaalvez/tech-challenge-fiap-books-api.git
 cd tech-challenge-fiap-books-api
 python -m venv .venv
 source .venv/bin/activate  # ou .venv\Scripts\activate no Windows
