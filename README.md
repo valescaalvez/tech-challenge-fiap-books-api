@@ -1,5 +1,5 @@
 # README — FIAP Tech Challenge — Books API
-
+![Diagrama projeto](39ae9b4a-6e77-4bcc-81d7-f283b9bf5c59.jpg)
 ## Visão geral do projeto
 Este projeto implementa um **pipeline de dados** e uma **API RESTful** para disponibilizar uma base de livros (extraída de `https://books.toscrape.com/`) para consumo por cientistas de dados e sistemas de recomendação. O objetivo é oferecer os dados de forma simples e escalável, com endpoints core para listagem, busca, detalhe e categorias, além de documentação automática via Swagger.
 
